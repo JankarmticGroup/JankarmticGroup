@@ -1,0 +1,17 @@
+{
+  "name": "scheduler",
+  "version": "1.0.0",
+  "description": "Schedule appointments between users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jankarmtic Group",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^8.6.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.2"
+  }
+}

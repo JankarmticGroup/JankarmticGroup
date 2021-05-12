@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduler</title>
+</head>
+<body>
+    <script>
+        //create users object
+    const users=[];
+    
+    // create new user constructor class
+    class User {
+        constructor(name, sms, email, appts) {  // Constructor
+          this.email = email;
+          this.sms= sms;
+          this.name = name;
+          this.appts = appts;
+        
+                        }
+                }
+    //add test users
+    
+      const laurie = new User('laurie',"4144448888", "laurie@SpeechGrammarList.mail",["12/15/2021","1730"]);
+      const jon = new User('jon',"4843458907", "jon@upyours.mail",["1/13/2022","1130"]);
+      const lin = new User('lin',"4888144448", "lin@SpeechGrammarList.mail",["2/15/2021","0630"]);
+      const jessica = new User('jessica',"4148884448", "jessica@SpeechGrammarList.mail",["5/22/2021","1030"]);
+      users.push(laurie);
+      //check user against database
+
+        function createUser (user) {
+        //check if email exists and register
+
+        const emailExists = users.some(n => n.email === user.email);
+        if (emailExists) {
+            console.log(` email: ${user.email} exists`)
+            return users;
+        } else {
+        console.log(`registering ${user.name} `)
+        users.push(user)
+        return users;
+      };
+      
+      
+    }
+      
+      
+      
+      </script>
+    
+    
+</html>
+
+
+
+
