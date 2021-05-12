@@ -13,27 +13,29 @@
     
     // create new user constructor class
     class User {
-        constructor(name, sms, email, appts) {  // Constructor
+        constructor(name, sms, email, [date,time]) {  // Constructor
           this.email = email;
           this.sms= sms;
           this.name = name;
-          this.appts = appts;
+          this.appts = [date,time];
         
                         }
                 }
+
+
     //add test users
     
       const laurie = new User('laurie',"4144448888", "laurie@SpeechGrammarList.mail",["12/15/2021","1730"]);
       const jon = new User('jon',"4843458907", "jon@upyours.mail",["1/13/2022","1130"]);
       const lin = new User('lin',"4888144448", "lin@SpeechGrammarList.mail",["2/15/2021","0630"]);
       const jessica = new User('jessica',"4148884448", "jessica@SpeechGrammarList.mail",["5/22/2021","1030"]);
-      users.push(laurie);
+      users.push(laurie,jessica,lin);
       //check user against database
 
         function createUser (user) {
         //check if email exists and register
 
-        const emailExists = users.some(n => n.email === user.email);
+        const emailExists = users.appts.some(n => n.email === user.email);
         if (emailExists) {
             console.log(` email: ${user.email} exists`)
             return users;
@@ -44,9 +46,37 @@
       };
       
       
-    }
+ };
+// function checkAppt  (date,time) {
+// if (this.appts === [date,time]) {    
+        
+//          return true;}
+
+// else { console.log("create new appt");
+//         return false;
+//      };
+
+//  };
+ function createAppointment (user1, newAppt) {
+    console.log(`${user1.appts} `);
+    console.log(`${newAppt} `);
+    if (JSON.stringify(user1.appts) === JSON.stringify(newAppt)) {
+        console.log(`they match`);
+
+    } else{
+        console.log(`No match`);
+    };
+
+
+
+
+//   console.log(`${user1.appts}`);
+//  const apptlExists=user1.appts.map(checkAppt(date,time));
+//  console.log(`${appt1Exists}`);
+   
+
       
-      
+}
       
       </script>
     
