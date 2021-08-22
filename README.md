@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @JankarmticGroup
 - 👀 I’m interested in building things
-- 🌱 I’m currently learning React Native
+- 🌱 I’m currently learning Node
 
 
 <!---
